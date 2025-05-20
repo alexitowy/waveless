@@ -78,12 +78,13 @@
     position: absolute;
     top: 12px;
     right: 12px;
-    background: orange;
-    padding: 4px 10px;
-    border-radius: 12px;
+    background: $primary-color;
+    color: black;
+    font-family: $font-secondary;
     font-size: 12px;
-    font-weight: bold;
-    color:black
+    font-weight: 800;
+    border-radius: 12px;
+    padding: 4px 10px;
   }
 
   &__content {
@@ -125,7 +126,17 @@
   }
 
   &__price {
-    font-size: 14px;
+    font-family: $font-secondary;
+    font-weight: 500;
+    font-size: 12px;
+    margin: 0;
+    line-height: 19px;
+
+    strong {
+      display: block;
+      font-weight: $weight-700;
+      font-size: 22px;
+    }
   }
 
   &__actions {
@@ -158,9 +169,18 @@
     }
 
     &-arrow {
-      font-size: 12px;
-      text-decoration: none;
-    
+      font-size: 14px;
+      font-family: $font-secondary;
+      color: $secondary-color;
+      font-weight: 600;
+
+      &--down {
+        transform: rotate(-90deg);
+      }
+
+      &--up {
+        transform: rotate(90deg);
+      }
     }
   }
 
@@ -232,38 +252,68 @@
 
   }
 
-    &__title {
-      font-weight: bold;
-      margin-bottom: 8px;
+  &__title {
+    font-size: 18px;
+    margin-left: 8px;
+  }
+
+  &__close {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    border: none;
+    background-color: $filter-color;
+
+    &:hover {
+      color: $secondary-color;
+      font-weight: $weight-700;
     }
+  }
 
-    &__location {
-      font-size: 14px;
-      color: #6b21a8;
-      margin-bottom: 16px;
+  &__content {
+    @include flex(null, null, column);
+    gap: 20px;
+    height: 184px;
+    padding: 24px;
+    border-top: 1px solid $color-gray-100;
+    border-bottom: 1px solid $color-gray-100;
+  }
+
+  &__location {
+    font-family: $font-base;
+    font-size: 14px;
+    font-weight: 500;
+
+    strong {
+      color: $secondary-color;
     }
+  }
 
-    &__list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 14px;
+  &__list {
+    display: grid;
+    gap: 4px;
+    font-size: 16px;
+    font-weight: 500;
+  }
 
-      li {
-        display: flex;
-        justify-content: space-between;
-        padding: 4px 0;
-      }
+  &__items {
+    @include flex(space-between);
+
+    &-strong {
+      font-size: 18px;
+      font-weight: $weight-700;
     }
+  }
 
-    &__total {
-      display: flex;
-      justify-content: space-between;
-      font-weight: bold;
-      font-size: 15px;
-      margin-top: 16px;
-      border-top: 1px solid #eee;
-      padding-top: 8px;
+  &__footer {
+    background-color: $filter-color;
+    height: 64px;
+    @include flex(space-between, center);
+    font-weight: $weight-700;
+    padding: 0 24px;
+
+    &-span--big {
+      font-size: 22px;
     }
   }
 
