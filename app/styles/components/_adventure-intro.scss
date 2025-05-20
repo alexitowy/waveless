@@ -1,0 +1,83 @@
+@use "../settings/settings" as *;
+@use "../tools/mixins" as *;
+
+.adventure-intro {
+    text-align: center;
+    align-content: center;
+
+    padding-top: 72px;
+    padding-bottom: 72px;
+
+    &__title {
+        font-family: $font-base;
+        font-size: 38px;
+        font-weight: 700;
+    }
+
+    &__description {
+        font-family: $font-secondary;
+        font-size: 22px;
+        color: #6B7D8D;
+        font-weight: 400;
+        line-height: 26px;
+        margin-top: 8px
+    }
+
+    @include respond-to(lg) {
+        .adventure-intro {
+            margin-bottom: 48px;
+        }
+    }
+}
+
+@media (max-width:743px) {
+    .adventure-intro {
+        margin-left: 32px;
+        margin-right: 32px;
+
+
+        &__title {
+            font-size: 30px;
+
+        }
+
+        &__description {
+            font-size: 20px;
+
+            margin-top: 16px;
+        }
+    }
+}
+
+@media (max-width:1022px) {
+    .adventure-intro {
+
+
+        &__title {
+            font-size: 32px;
+        }
+
+    }
+}
+
+@media (max-width:1127px) {
+    .adventure-intro {
+
+
+        &__title {
+            font-size: 34px;
+        }
+
+    }
+}
+
+@media (max-width:1540px) {
+    .adventure-intro {
+
+
+        &__title {
+            font-size: 38px;
+        }
+
+    }
+}

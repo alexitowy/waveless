@@ -1,0 +1,23 @@
+{
+  "name": "pruebawave",
+  "version": "1.0.0",
+  "main": "index.html",
+  "scripts": {
+    "sass": "sass --watch app/styles/styles.scss app/styles/styles.css",  
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/cofana-labs/layout-test.git"
+  },
+  "author": "Carlos, Oti y Andres",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://bitbucket.org/cofana-labs/layout-test/issues"
+  },
+  "homepage": "https://bitbucket.org/cofana-labs/layout-test#readme",
+  "description": "",
+  "dependencies": {
+    "sass": "^1.88.0"
+  }
+}

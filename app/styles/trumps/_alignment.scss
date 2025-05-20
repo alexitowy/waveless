@@ -1,0 +1,14 @@
+$positions: (
+    'start': start,
+    'end': end,
+    'left': left,
+    'right': right,
+    'center': center,
+    'justify': justify,
+);
+
+@each $position, $location in $positions {
+    .text-#{$position} {
+        text-align: $location !important;
+    }
+}

@@ -1,0 +1,54 @@
+$sizes:(
+    '4': 0.25rem,
+    '8': 0.5rem,
+    '12': 0.75rem,
+    '16': 1rem,
+    '20': 1.25rem,
+    '24': 1.5rem,
+    '32': 2rem,
+    '36': 2.25rem,
+);
+
+@each $size, $spacing in $sizes {
+    .mt-#{$size}{
+        margin-top: $spacing!important;
+    }
+    .mb-#{$size}{
+        margin-bottom: $spacing!important;
+    }
+    .ml-#{$size}{
+        margin-left: $spacing!important;
+    }
+    .mr-#{$size}{
+        margin-right: $spacing!important;
+    }
+    .mx-#{$size}{
+        margin-right: $spacing!important;
+        margin-left: $spacing!important;
+    }
+    .my-#{$size}{
+        margin-top: $spacing!important;
+        margin-bottom: $spacing!important;
+    }
+
+    .pt-#{$size}{
+        padding-top: $spacing!important;
+    }
+    .pb-#{$size}{
+        padding-bottom: $spacing!important;
+    }
+    .pl-#{$size}{
+        padding-left: $spacing!important;
+    }
+    .pr-#{$size}{
+        padding-right: $spacing!important;
+    }
+    .px-#{$size}{
+        padding-left: $spacing!important;
+        padding-right: $spacing!important;
+    }
+    .py-#{$size}{
+        padding-top: $spacing!important;
+        padding-bottom: $spacing!important;
+    }
+}

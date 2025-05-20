@@ -1,0 +1,13 @@
+@use "../tools/_mixins" as *;
+@use "../settings/_settings" as *;
+
+.button {
+    @include button();
+}
+
+.button__secondary {
+    @include button();
+    background-color: $secondary-color;
+    border-radius: 208px;
+    color: $color-white-100;
+}
