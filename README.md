@@ -17,7 +17,7 @@ Sigue estos pasos para instalar y configurar el proyecto:
     ```
 3. Instala las dependencias:
     ```bash
-    [comando de instalación]
+    npm i
     ```
 
 ## Uso
