@@ -111,5 +111,10 @@ function setActive(index) {
     setActive(currentIndex);
   });
 
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % data.length;
+    setActive(currentIndex);
+  }, 7000);
+
   createSlides();
 });

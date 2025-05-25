@@ -10,4 +10,9 @@
     background-color: $secondary-color;
     border-radius: 208px;
     color: $color-white-100;
+    
+    &:hover {
+        background-color: $primary-color;
+        color: $color-black-100;
+    }
 }

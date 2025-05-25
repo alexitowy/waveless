@@ -14,7 +14,6 @@
   @include respond-to(lg) {
     display: block;
   }
-
 }
 
 .openFilter {
@@ -51,34 +50,19 @@
   width: 264px;
   border-radius: 16px;
   margin-top: 49px;
-  @include respond-to(lg) {
-    display: none;
-    &.active {
-        position: absolute;
-        display: block;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        z-index: 10;
-        border-radius: 0px;
-        margin-top: 0px;
-        box-shadow: 4px 0px 8px 0px #00000033;
-
-    }
-  }
 
   &__title {
     font-family: $font-base;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 20px;
+    font-size: 18px;
+    font-weight: $weight-700;
+    line-height: 24px;
     padding: 28px 0;
-    color: #342e34;
-    border-bottom: 1px solid #f0ebe9;
+    border-bottom: 1px solid $color-gray-100;
     text-align: center;
     vertical-align: middle;
     position: relative;
-    @include respond-to(lg){
+    
+    @include respond-to(lg) {
       padding-left: 24px;
       text-align: left;
     }
@@ -89,7 +73,7 @@
       position: absolute;
       right: 24px;
       top: 28px;
-      @include respond-to(lg){
+      @include respond-to(lg) {
         display: block;
       }
     }
@@ -242,11 +226,26 @@
     color: #000;
     transition: transform 0.3s ease, color 0.3s ease;
   }
-}
 
-@media (max-width: 390px) {
-   .filter.active{
+  @include respond-to(lg) {
+    display: none;
+    &.active {
+      position: absolute;
+      display: block;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      z-index: 10;
+      border-radius: 0px;
+      margin-top: 0px;
+      box-shadow: 4px 0px 8px 0px #00000033;
+    }
+  }
+
+  @include respond-to(xs) {
+    &.active {
       width: 100%;
       position: fixed;
-   } 
+    }
   }
+}
