@@ -19,7 +19,7 @@
 
     &.active {
       @include flex();
-      position: fixed;
+      position: absolute;
       top: 80px;
       width: 100%;
       height: fit-content;
